@@ -1,0 +1,51 @@
+import { useState } from "react";
+import { toast } from "sonner";
+
+const FinalCTASection = () => {
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setSubmitting(true);
+    setTimeout(() => {
+      toast.success("You're on the list! We'll be in touch soon.");
+      setEmail("");
+      setSubmitting(false);
+    }, 600);
+  };
+
+  return (
+    <section id="waitlist" className="py-20 md:py-28">
+      <div className="container max-w-3xl mx-auto px-4 text-center space-y-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-secondary tracking-tight">
+          Be the first to eliminate the{" "}
+          <span className="text-primary">prior auth bottleneck</span>.
+        </h2>
+        <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+          Join our waitlist for early access. We're onboarding a select group of specialty pharmacies and health systems.
+        </p>
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your work email"
+            required
+            className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
+          />
+          <button
+            type="submit"
+            disabled={submitting}
+            className="gradient-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap"
+          >
+            {submitting ? "Joining…" : "Join the Waitlist"}
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+};
+
+export default FinalCTASection;
