@@ -3,7 +3,9 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import RegulatorySection from "@/components/RegulatorySection";
 import BenefitsSection from "@/components/BenefitsSection";
+import CompetitiveEdgeSection from "@/components/CompetitiveEdgeSection";
 import PersonasSection from "@/components/PersonasSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import FinalCTASection from "@/components/FinalCTASection";
@@ -30,7 +32,9 @@ const Index = () => {
         <HeroSection />
         <ProblemSection />
         <HowItWorksSection />
+        <RegulatorySection />
         <BenefitsSection />
+        <CompetitiveEdgeSection />
         <PersonasSection />
         <SocialProofSection />
         <FinalCTASection />

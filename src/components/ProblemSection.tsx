@@ -1,9 +1,24 @@
-import { AlertTriangle, Clock, DollarSign } from "lucide-react";
+import { FileSearch, RotateCcw, TrendingDown } from "lucide-react";
 
-const stats = [
-  { icon: AlertTriangle, value: "75%", label: "of specialty PAs initially denied due to incomplete documentation" },
-  { icon: Clock, value: "14+ days", label: "average time to approval for specialty medications" },
-  { icon: DollarSign, value: "$35K+", label: "annual cost per FTE dedicated to prior auth workflows" },
+const painPoints = [
+  {
+    icon: FileSearch,
+    title: "The Chart Dive",
+    description:
+      "Clinical staff manually scroll through hundreds of pages of clinical charts searching for the one lab result or failed therapy a payor requires. It takes hours per case.",
+  },
+  {
+    icon: RotateCcw,
+    title: "The Denial Loop",
+    description:
+      "Incomplete submissions get denied. Staff must decode the denial letter, hunt for missing data, and resubmit — adding weeks to patient therapy start.",
+  },
+  {
+    icon: TrendingDown,
+    title: "The Silent Revenue Leak",
+    description:
+      "Every delayed or abandoned PA is a lost fill. For high-cost biologics ($10K–$50K/month), even a small improvement in approval rates recovers significant revenue.",
+  },
 ];
 
 const ProblemSection = () => {
@@ -12,25 +27,21 @@ const ProblemSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary tracking-tight">
-            Prior auth is broken.{" "}
-            <span className="text-accent-rose">Patients pay the price.</span>
+            Your team wasn't hired to{" "}
+            <span className="text-accent-rose">chase paperwork.</span>
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Specialty pharmacies lose revenue and patients face dangerous therapy delays because
-            prior authorization is manual, error-prone, and painfully slow.
-          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {stats.map((stat, i) => (
+          {painPoints.map((point, i) => (
             <div
               key={i}
-              className="text-center p-8 rounded-2xl bg-muted/50 border border-border shadow-soft space-y-4"
+              className="p-8 rounded-2xl bg-muted/50 border border-border shadow-soft space-y-4"
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10">
-                <stat.icon className="w-6 h-6 text-accent" />
+                <point.icon className="w-6 h-6 text-accent" />
               </div>
-              <div className="text-4xl font-bold text-secondary">{stat.value}</div>
-              <p className="text-muted-foreground text-sm leading-relaxed">{stat.label}</p>
+              <h3 className="text-xl font-bold text-secondary">{point.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{point.description}</p>
             </div>
           ))}
         </div>

@@ -5,19 +5,19 @@ const personas = [
     icon: Building2,
     title: "Specialty Pharmacies",
     description:
-      "Stop losing revenue to PA denials and patient abandonment. BrevityRx automates the clinical documentation that payors require — so your team dispenses faster and retains more patients.",
+      "Speed up time-to-fill for high-cost biologics. Reduce abandonment rates. Recover revenue that's currently lost to PA delays and denials. BrevityRx handles the clinical evidence assembly your team shouldn't have to do manually.",
   },
   {
     icon: Hospital,
     title: "Health Systems",
     description:
-      "Reduce administrative burden across your specialty clinics. BrevityRx integrates with your EMR to ensure every PA submission meets medical necessity requirements the first time.",
+      "Reduce the administrative burden on RN case managers so they can focus on patient care, not paperwork. Automate the PA workflow across departments — from order to approval — without adding headcount.",
   },
 ];
 
 const PersonasSection = () => {
   return (
-    <section id="personas" className="py-20 md:py-28 gradient-hero">
+    <section id="personas" className="py-20 md:py-28">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary tracking-tight">
