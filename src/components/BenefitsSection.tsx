@@ -1,29 +1,29 @@
-import { Zap, TrendingUp, Users, HeartPulse } from "lucide-react";
+import { Clock, UserCheck, DollarSign, RefreshCw } from "lucide-react";
 
 const benefits = [
   {
-    icon: Zap,
-    title: "Under 48-Hour Approvals",
-    description: "Slash approval timelines from weeks to hours. Patients start therapy faster.",
-    metric: "90% faster",
+    icon: Clock,
+    metric: "< 48 hrs",
+    title: "Order to Approval",
+    description: "Average time from order to PA approval, down from 2+ weeks.",
   },
   {
-    icon: TrendingUp,
-    title: "Recovered Revenue",
-    description: "Fewer denials and abandonment means more prescriptions dispensed and revenue retained.",
-    metric: "$2M+ saved/yr",
+    icon: UserCheck,
+    metric: "Xh → minutes",
+    title: "Staff Time per PA",
+    description: "Free RN case managers from repetitive evidence gathering so they can focus on clinical work.",
   },
   {
-    icon: Users,
-    title: "Reduced Staff Burden",
-    description: "Free your PA team from repetitive data gathering and fax chasing. Redeploy to higher-value work.",
-    metric: "80% less manual work",
+    icon: DollarSign,
+    metric: "$__M recovered",
+    title: "Revenue Recaptured",
+    description: "Annual revenue recovered from faster fills on high-cost biologics — fewer abandonments, fewer lost scripts.",
   },
   {
-    icon: HeartPulse,
-    title: "Better Patient Outcomes",
-    description: "Faster access to specialty medications reduces therapy gaps and improves clinical outcomes.",
-    metric: "2x faster therapy starts",
+    icon: RefreshCw,
+    metric: "Auto re-auth",
+    title: "Continuous Authorization",
+    description: "Monitors refill dates and starts the next PA 30 days early — no manual tracking, no lapses.",
   },
 ];
 
@@ -33,11 +33,8 @@ const BenefitsSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary tracking-tight">
-            The Impact of Automation
+            Measurable Impact from Day One
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real results for specialty pharmacies and health systems.
-          </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, i) => (
@@ -48,7 +45,7 @@ const BenefitsSection = () => {
               <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 group-hover:gradient-primary transition-all duration-300">
                 <benefit.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
               </div>
-              <div className="text-2xl font-bold text-primary">{benefit.metric}</div>
+              <div className="text-3xl font-bold text-primary">{benefit.metric}</div>
               <h3 className="text-lg font-semibold text-secondary">{benefit.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
             </div>

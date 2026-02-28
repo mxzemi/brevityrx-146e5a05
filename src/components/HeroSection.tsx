@@ -31,8 +31,11 @@ const HeroSection = () => {
               <span className="text-primary">The first time.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              BrevityRx uses agentic AI to eliminate prior authorization delays — cutting approval timelines from{" "}
-              <strong className="text-foreground">weeks to under 48 hours</strong>.
+              BrevityRx is an autonomous AI agent that sits between your EMR and the payor portal. It pulls the exact clinical evidence needed — lab results, failed therapies, clinical notes — and submits a bulletproof PA request before your team even opens a fax machine.
+            </p>
+            <p className="text-xl md:text-2xl font-bold text-secondary">
+              Weeks of delays → under 48 hours.{" "}
+              <span className="text-primary">Automatically.</span>
             </p>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md">
               <input

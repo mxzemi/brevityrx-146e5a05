@@ -20,11 +20,11 @@ const FinalCTASection = () => {
     <section id="waitlist" className="py-20 md:py-28">
       <div className="container max-w-3xl mx-auto px-4 text-center space-y-8">
         <h2 className="text-3xl md:text-4xl font-bold text-secondary tracking-tight">
-          Be the first to eliminate the{" "}
-          <span className="text-primary">prior auth bottleneck</span>.
+          Stop Losing Revenue to{" "}
+          <span className="text-primary">Paperwork.</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-          Join our waitlist for early access. We're onboarding a select group of specialty pharmacies and health systems.
+          Join the waitlist and be first to put prior auth on autopilot.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
           <input
