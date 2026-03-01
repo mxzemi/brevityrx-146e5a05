@@ -20,7 +20,7 @@ const HeroSection = () => {
   return (
     <section id="waitlist" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-12">
           {/* Left: Copy */}
           <div className="flex-1 space-y-8 animate-fade-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
@@ -59,11 +59,11 @@ const HeroSection = () => {
           </div>
 
           {/* Right: Hero Illustration */}
-          <div className="flex-1 flex justify-center lg:justify-end animate-fade-in">
+          <div className="flex-1 flex justify-center md:justify-end animate-fade-in">
             <img
               src={heroIllustration}
               alt="BrevityRx autonomous workflow — document flows through AI processing to approval"
-              className="w-full max-w-lg lg:max-w-xl xl:max-w-2xl"
+              className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
             />
           </div>
         </div>
