@@ -1,29 +1,29 @@
-import { Clock, UserCheck, DollarSign, RefreshCw } from "lucide-react";
+import { Clock, UserCheck, DollarSign, RefreshCw, ShieldCheck } from "lucide-react";
 
 const benefits = [
   {
     icon: Clock,
     metric: "< 48 hrs",
     title: "Order to Approval",
-    description: "Average time from order to PA approval, down from 2+ weeks.",
+    description: "Average time from order to PA approval, down from 10–30+ days.",
   },
   {
     icon: UserCheck,
-    metric: "Xh → minutes",
-    title: "Staff Time per PA",
-    description: "Free RN case managers from repetitive evidence gathering so they can focus on clinical work.",
+    metric: "12–13 hrs → minutes",
+    title: "Weekly Staff Time Reclaimed",
+    description: "Per provider, freeing your team for patient care instead of paperwork.",
   },
   {
     icon: DollarSign,
-    metric: "$__M recovered",
-    title: "Revenue Recaptured",
-    description: "Annual revenue recovered from faster fills on high-cost biologics — fewer abandonments, fewer lost scripts.",
+    metric: "$25B+",
+    title: "Industry PA Admin Costs",
+    description: "Annual industry spend on PA admin costs — we help you stop contributing to it.",
   },
   {
     icon: RefreshCw,
     metric: "Auto re-auth",
     title: "Continuous Authorization",
-    description: "Monitors refill dates and starts the next PA 30 days early — no manual tracking, no lapses.",
+    description: "Monitors refill dates and starts the next PA 30 days early — no manual tracking, no therapy lapses.",
   },
 ];
 
@@ -50,6 +50,22 @@ const BenefitsSection = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Regulatory callout */}
+        <div className="mt-12 p-6 md:p-8 rounded-2xl border border-primary/20 bg-primary/5 max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex-1 space-y-2">
+              <p className="text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-secondary">CMS-0057-F is live.</span>{" "}
+                Payors must now support FHIR APIs and 72-hour expedited turnaround. The $2.5–3.5B prior authorization market is projected to reach $4.5–8.8B by 2035. BrevityRx was built for this moment.
+              </p>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full gradient-primary text-primary-foreground text-sm font-bold shadow-card shrink-0">
+              <ShieldCheck className="w-4 h-4" />
+              CMS-0057-F Compliant — Day One
+            </div>
+          </div>
         </div>
       </div>
     </section>

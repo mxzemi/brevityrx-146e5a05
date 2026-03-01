@@ -4,6 +4,7 @@ const navLinks = [
   { label: "Problem", href: "#problem" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Benefits", href: "#benefits" },
+  { label: "Why BrevityRx", href: "#competitive" },
   { label: "Who It's For", href: "#personas" },
 ];
 
