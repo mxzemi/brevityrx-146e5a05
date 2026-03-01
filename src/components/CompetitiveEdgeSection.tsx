@@ -5,19 +5,19 @@ const differentiators = [
     icon: FileWarning,
     title: "Denial Intelligence",
     description:
-      "Our agent reads a denial letter, understands the technical reason for rejection, and automatically queries the EMR to find the missing evidence to overturn it. No manual chart review. No guessing.",
+      "Our agent reads a denial letter, understands the technical reason for rejection, and automatically queries the EMR to find the missing evidence to overturn it. No manual chart review. No guessing. With 82–83% of appeals already being overturned, the evidence exists — we just find it first.",
   },
   {
     icon: BrainCircuit,
     title: "Specialty-First Clinical IQ",
     description:
-      "We focus on the hardest cases: oncology, rheumatology, neurology, rare disease. Our AI understands the clinical nuances of specialty therapeutics — not just generic formulary checks. Higher clinical IQ than any generalist payor tool.",
+      "We focus on the hardest cases: oncology, rheumatology, neurology, rare disease, and gastroenterology. Our AI understands the clinical nuances of specialty therapeutics — not just generic formulary checks. Higher clinical IQ than any generalist tool on the market.",
   },
   {
     icon: CalendarClock,
     title: "Continuous Auth",
     description:
-      "Many specialty drugs require re-authorization every 6 months. BrevityRx monitors the EMR for refill dates and starts the next PA cycle 30 days before expiration — automatically. No lapses, no therapy gaps.",
+      "Many specialty drugs require re-authorization every 6 months. BrevityRx monitors the EMR for refill dates and starts the next PA cycle 30 days before expiration — automatically. No lapses, no therapy gaps, no revenue leakage.",
   },
 ];
 

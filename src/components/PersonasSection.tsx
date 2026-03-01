@@ -5,13 +5,13 @@ const personas = [
     icon: Building2,
     title: "Specialty Pharmacies",
     description:
-      "Speed up time-to-fill for high-cost biologics. Reduce abandonment rates. Recover revenue that's currently lost to PA delays and denials. BrevityRx handles the clinical evidence assembly your team shouldn't have to do manually.",
+      "Speed up time-to-fill for high-cost biologics across oncology, rare disease, neurology, rheumatology, and gastroenterology. Reduce the 37–40% abandonment rate. Recover revenue that's currently lost to PA delays and denials. BrevityRx handles the clinical evidence assembly your team shouldn't have to do manually.",
   },
   {
     icon: Hospital,
     title: "Health Systems",
     description:
-      "Reduce the administrative burden on RN case managers so they can focus on patient care, not paperwork. Automate the PA workflow across departments — from order to approval — without adding headcount.",
+      "Reduce the administrative burden on your team so they can focus on patient care, not paperwork. Automate the PA workflow across departments — from order to approval — without adding headcount. Stop spending 12–13 hours per provider per week on a process that should be autonomous.",
   },
 ];
 

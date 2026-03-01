@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import heroIllustration from "@/assets/hero-illustration.png";
 
 const HeroSection = () => {
   const [email, setEmail] = useState("");
@@ -18,51 +17,42 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 gradient-hero overflow-hidden">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Autonomous Prior Authorization
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight tracking-tight">
-              The right clinical proof.{" "}
-              <span className="text-primary">The first time.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              BrevityRx is an autonomous AI agent that sits between your EMR and the payor portal. It pulls the exact clinical evidence needed — lab results, failed therapies, clinical notes — and submits a bulletproof PA request before your team even opens a fax machine.
-            </p>
-            <p className="text-xl md:text-2xl font-bold text-secondary">
-              Weeks of delays → under 48 hours.{" "}
-              <span className="text-primary">Automatically.</span>
-            </p>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your work email"
-                required
-                className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
-              />
-              <button
-                type="submit"
-                disabled={submitting}
-                className="gradient-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap"
-              >
-                {submitting ? "Joining…" : "Join the Waitlist"}
-              </button>
-            </form>
-            <p className="text-xs text-muted-foreground">No spam. Early access for specialty pharmacies & health systems.</p>
+        <div className="max-w-3xl mx-auto space-y-8 animate-fade-up">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            Autonomous Prior Authorization
           </div>
-          <div className="hidden md:block animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <img
-              src={heroIllustration}
-              alt="Automated prior authorization workflow"
-              className="w-full max-w-lg mx-auto drop-shadow-lg"
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight tracking-tight">
+            The right clinical proof.{" "}
+            <span className="text-primary">The first time.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            Specialty medications cost $38,000+ per patient per year and represent over 50% of US pharmacy spend — yet 37–40% of denied prescriptions are abandoned entirely because the PA process is broken. BrevityRx is an autonomous AI agent that sits between your EMR and the payor portal. It pulls the exact clinical evidence needed and submits a bulletproof PA request — before your team even opens a fax machine.
+          </p>
+          <p className="text-xl md:text-2xl font-bold text-secondary">
+            10–30+ days → under 48 hours.{" "}
+            <span className="text-primary">Automatically.</span>
+          </p>
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your work email"
+              required
+              className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
             />
-          </div>
+            <button
+              type="submit"
+              disabled={submitting}
+              className="gradient-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap"
+            >
+              {submitting ? "Joining…" : "Join the Waitlist"}
+            </button>
+          </form>
+          <p className="text-xs text-muted-foreground">No spam. Early access for specialty pharmacies & health systems.</p>
         </div>
       </div>
     </section>

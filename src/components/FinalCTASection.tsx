@@ -21,7 +21,7 @@ const FinalCTASection = () => {
       <div className="container max-w-3xl mx-auto px-4 text-center space-y-8">
         <h2 className="text-3xl md:text-4xl font-bold text-secondary tracking-tight">
           Stop Losing Revenue to{" "}
-          <span className="text-primary">Paperwork.</span>
+          <span className="text-accent-rose">Paperwork.</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Join the waitlist and be first to put prior auth on autopilot.

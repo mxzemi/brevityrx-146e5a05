@@ -7,7 +7,7 @@ const agents = [
     name: "The Sentinel",
     role: "Order Detection",
     description:
-      "An autonomous listener monitors your EMR in real time via FHIR hooks (ServiceRequest, MedicationRequest). The instant a specialty drug or procedure is ordered that requires PA, Sentinel triggers — before anyone on your team even knows there's a requirement. It checks against a continuously updated payor rule-set database so nothing slips through.",
+      "An autonomous listener monitors your EMR in real time via FHIR integration. The instant a specialty drug or procedure is ordered that requires PA, Sentinel triggers — before anyone on your team even knows there's a requirement. It checks against a continuously updated payor rule-set database so nothing slips through.",
   },
   {
     icon: SearchCheck,
@@ -15,7 +15,7 @@ const agents = [
     name: "The Clinical Researcher",
     role: "Evidence Assembly",
     description:
-      "Instead of a nurse scrolling through 100 pages of charts, our RAG-powered agent finds exactly what the payor needs. If the policy requires 'failed therapy with Drug X,' the Clinical Researcher searches three years of pharmacy claims and clinical notes to find the date, dosage, and documented reason for discontinuation. Then the Cross-Examiner validates every piece of evidence against the specific payor policy — so nothing is submitted without proof it meets the criteria.",
+      "Instead of your team scrolling through 100 pages of charts, our AI-powered agent finds exactly what the payor needs. If the policy requires 'failed therapy with Drug X,' the Clinical Researcher searches three years of pharmacy claims and clinical notes to find the date, dosage, and documented reason for discontinuation. Then the Cross-Examiner validates every piece of evidence against the specific payor policy — so nothing is submitted without proof it meets the criteria.",
   },
   {
     icon: Send,
@@ -23,7 +23,7 @@ const agents = [
     name: "The Nexus",
     role: "Submission",
     description:
-      "The last-mile agent. For modern payors, Nexus submits via the Da Vinci PAS FHIR API. For legacy portals that still lack APIs, it uses a browser agent to navigate and submit directly. If confidence on any element drops below 90%, it generates a Draft Review for your case manager — one click to approve, then it submits automatically.",
+      "The last-mile agent. For modern payors, Nexus submits electronically via standardized FHIR APIs. For legacy portals that still lack APIs, it uses a browser agent to navigate and submit directly. If confidence on any element drops below 90%, it generates a Draft Review for your team — one click to approve, then it submits automatically.",
   },
 ];
 
