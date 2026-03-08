@@ -5,15 +5,27 @@ const FinalCTASection = () => {
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
     setSubmitting(true);
-    setTimeout(() => {
+    try {
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSe0fgh-rWpcjD2JgrR7fG0P31pEDh553y9Lk6Zk_XZ7XJGmLQ/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ "entry.562743024": email }),
+        }
+      );
       toast.success("You're on the list! We'll be in touch soon.");
       setEmail("");
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
       setSubmitting(false);
-    }, 600);
+    }
   };
 
   return (
