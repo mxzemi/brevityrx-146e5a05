@@ -12,16 +12,10 @@ const HeroSection = () => {
     if (!email.trim()) return;
     setSubmitting(true);
     try {
-      const formData = new FormData();
-      formData.append("entry.562743024", email);
-      await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSe0fgh-rWpcjD2JgrR7fG0P31pEDh553y9Lk6Zk_XZ7XJGmLQ/formResponse",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: formData,
-        }
-      );
+      const { error } = await supabase
+        .from("waitlist_emails")
+        .insert({ email: email.trim() });
+      if (error) throw error;
       toast.success("You're on the list! We'll be in touch soon.");
       setEmail("");
     } catch {
