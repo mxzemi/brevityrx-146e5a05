@@ -13,7 +13,7 @@ const Footer = () => {
           <a href="#" className="hover:text-secondary transition-colors">Contact</a>
         </div>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} BrevityRx. All rights reserved.
+          © 2027 BrevityRx. All rights reserved.
         </p>
       </div>
     </footer>
